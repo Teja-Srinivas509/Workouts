@@ -1,0 +1,9 @@
+[build]
+  base = "angular/rookie"
+  command = "ng build --output-path dist"
+  publish = "dist/rookie"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

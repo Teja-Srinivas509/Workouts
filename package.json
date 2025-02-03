@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node server.js",
+     "build": "ng build --output-path=dist/rookie --configuration production",
+    "heroku-postbuild": "ng build --output-path=dist/rookie --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:rookie": "node dist/rookie/server/server.mjs"
