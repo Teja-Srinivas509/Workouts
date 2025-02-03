@@ -1,0 +1,101 @@
+.workout-form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.workout-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.workout-form label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.workout-form label span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.workout-form input, .workout-form select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.workout-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.workout-form button:hover {
+  background-color: #218838;
+}
+
+.workout-form input:focus, .workout-form select:focus {
+  outline: none;
+  border-color: #80b3ff;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .workout-form {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .workout-form h2 {
+    font-size: 20px;
+  }
+
+  .workout-form input, .workout-form select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .workout-form button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workout-form {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .workout-form input, .workout-form select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .workout-form button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}

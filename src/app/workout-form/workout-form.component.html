@@ -1,0 +1,31 @@
+
+<div class="workout-form">
+    <h2>Add Workout</h2>
+
+    <label>
+      <span>User Name*</span>
+      <input type="text" [(ngModel)]="userName" placeholder="Enter your name" />
+    </label>
+    <small *ngIf="errors.userName" class="error">{{ errors.userName }}</small>
+    
+    <label>
+      <span>Workout Type*</span>
+      <select [(ngModel)]="workoutType">
+        <option value="" disabled selected>Select Workout Type</option>
+        <option value="Cycling">Cycling</option>
+        <option value="Running">Running</option>
+        <option value="Swimming">Swimming</option>
+        <option value="Yoga">Yoga</option>
+      </select>
+    </label>
+    <small *ngIf="errors.workoutType" class="error">{{ errors.workoutType }}</small>
+    
+    <label>
+      <span>Workout Minutes*</span>
+      <input type="number" [(ngModel)]="workoutMinutes" placeholder="Enter minutes" />
+      <small *ngIf="errors.workoutMinutes" class="error">{{ errors.workoutMinutes }}</small>
+    </label>
+    <button (click)="addWorkout()">Add Workout</button>
+    <p *ngIf="workoutAdded">Workout added successfully!</p>
+  </div>
+  

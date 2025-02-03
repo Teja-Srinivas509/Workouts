@@ -19,6 +19,7 @@
             "polyfills": [
               "zone.js"
             ],
+            
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -29,7 +30,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -97,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ea5c9632-dca1-4d91-bc9a-4eadadf49dde"
   }
 }

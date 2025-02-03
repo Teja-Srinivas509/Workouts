@@ -1,0 +1,140 @@
+.workout-table {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  max-width: 90%;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 5%;
+  flex-wrap: wrap;
+}
+
+input[type="text"], select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+.pagination button {
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  table {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  .pagination {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 480px) {
+  th, td {
+    padding: 8px;
+  }
+
+  .filter-container input[type="text"], .filter-container select {
+    font-size: 14px;
+  }
+
+  .pagination button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+.analysis-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 40px;
+}
+
+.analysis-button-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.analysis-button-container button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.analysis-button-container button:active {
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .analysis-button-container {
+    justify-content: center;
+  }
+
+  .analysis-button-container button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
