@@ -4,7 +4,7 @@
  "scripts": {
   "ng": "ng",
   "start": "node server.js",
-  "build": "ng build --output-path=dist/rookie/browser --configuration production",
+  "build": "ng build --output-path=dist/rookie --configuration production",
   "heroku-postbuild": "ng build --output-path=dist/rookie/browser --configuration production",
   "watch": "ng build --watch --configuration development",
   "test": "ng test",
