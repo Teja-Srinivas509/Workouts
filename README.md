@@ -1,59 +1,19 @@
-# Rookie
+Frontend Development Challenge
+Description
+This repository contains the solution to the frontend development challenge, built with Angular. The app allows users to log and visualize workout data, showing analytics like types of workouts and their duration.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+Setup
+To run this project locally, follow these steps:
 
-## Development server
+Clone the repository: git clone https://github.com/Teja-Srinivas509/Workouts.git
+Install Dependencies: Install all the necessary dependencies required for the Angular project by running: npm install
+Run the Angular Application: Once the dependencies are installed, you can start the Angular development server: npm start
+Open the Application in Your Browser: After running the npm start command, the Angular development server will start. Open your browser and go to: http://localhost:4200
+Optional: Build the Project for Production (if needed) If you need to build the project for production, use: npm run build
+##Components overview
 
-To start a local development server, run:
+workout-form Component Purpose: The workout-form component allows users to enter their workout details such as the type of workout and the duration (in minutes). It acts as a form where users can submit their workout data. Key Features: Input fields for workout type and minutes. Validations to ensure valid data is entered. Saves entered data to local storage for future use. Usage: The component is used in the main app where users can log new workout data. After submission, the form resets and the data is stored in localStorage.
 
-```bash
-ng serve
-```
+display-workout Component Purpose: The display-workout component displays a list of all previously entered workouts. It fetches data from localStorage and shows a summary of each workout, including type and duration. Key Features: Displays the list of workouts stored in localStorage. Allows users to view their workout history. Provides a button to view detailed workout analysis. Usage: This component is typically used to show users a list of their past workout entries. It is displayed after the user successfully logs a new workout through the workout-form component.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+analysis Component Purpose: The analysis component displays a visual representation of the workout data in a chart format. It uses the Chart.js library to display workouts per type and their respective durations. Key Features: Displays a bar chart to visualize the workout data. Users can click on a workout in the list, and the chart will update to reflect that user's specific data. Data is fetched from localStorage for the current user's workouts. Usage: This component is used to analyze the workout data of individual users. Upon clicking a user in the display-workout component, their workout data is passed to the analysis component for visualization. The chart updates dynamically based on the selected user.
