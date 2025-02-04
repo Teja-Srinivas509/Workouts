@@ -8,6 +8,7 @@ import { DesignerService } from './../designer.service';
 
 @Component({
   selector: 'app-analysis',
+  standalone:true,
   imports: [CommonModule, ChartModule],
   templateUrl: './analysis.component.html',
   styleUrls: ['./analysis.component.css'],
@@ -27,7 +28,8 @@ export class AnalysisComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     designerService: DesignerService  
-  ) {
+  ) 
+  {
     this.designerService = designerService;  
   }
 
