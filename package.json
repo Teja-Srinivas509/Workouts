@@ -1,15 +1,15 @@
 {
   "name": "rookie",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "node server.js",
-    "build": "ng build --output-path=dist/rookie --configuration production",
-    "heroku-postbuild": "ng build --output-path=dist/rookie --configuration production",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:rookie": "node dist/rookie/server/server.mjs"
-  },
+ "scripts": {
+  "ng": "ng",
+  "start": "node server.js",
+  "build": "ng build --output-path=dist/rookie/browser --configuration production",
+  "heroku-postbuild": "ng build --output-path=dist/rookie/browser --configuration production",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "serve:ssr:rookie": "node dist/rookie/server/server.mjs"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.1.0",
