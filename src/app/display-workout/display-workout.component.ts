@@ -197,13 +197,25 @@ export class DisplayWorkoutComponent implements OnInit {
 
   
   ngOnInit(): void {
+    this.loadInitialData();
+  }
+
+  loadInitialData(): void {
     try {
       this.storedData = JSON.parse(localStorage.getItem('workouts') || '[]');
-      this.userData = Array.isArray(this.storedData) ? this.storedData : [];
-    } catch {
-      console.error('Invalid data in localStorage');
-      this.userData = [];
+      if (!Array.isArray(this.storedData) || this.storedData.length === 0) {
+        localStorage.setItem('workouts', JSON.stringify(this.userData));
+      } else {
+        this.userData = this.storedData;
+      }
+    } catch (error) {
+      console.error('Invalid data in localStorage. Resetting data.');
+      localStorage.setItem('workouts', JSON.stringify(this.userData));
     }
+  }
+
+  saveWorkoutsToLocalStorage(): void {
+    localStorage.setItem('workouts', JSON.stringify(this.userData));
   }
 
   
