@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-display-workout',
   imports: [RouterModule, CommonModule, FormsModule],
@@ -193,6 +194,8 @@ export class DisplayWorkoutComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router) {}
   
+
+  
   ngOnInit(): void {
     try {
       this.storedData = JSON.parse(localStorage.getItem('workouts') || '[]');
@@ -202,8 +205,8 @@ export class DisplayWorkoutComponent implements OnInit {
       this.userData = [];
     }
   }
-  
 
+  
   getTotalPages(): number {
     return Math.ceil(this.filteredUsers().length / this.itemsPerPage);
   }

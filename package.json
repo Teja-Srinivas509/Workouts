@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-     "build": "ng build --output-path=dist/rookie --configuration production",
+    "build": "ng build --output-path=dist/rookie --configuration production",
     "heroku-postbuild": "ng build --output-path=dist/rookie --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -13,7 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.1.0",
-    "@angular/common": "^19.1.0",
+    "@angular/common": "^19.1.4",
     "@angular/compiler": "^19.1.0",
     "@angular/core": "^19.1.0",
     "@angular/forms": "^19.1.0",
@@ -25,6 +25,7 @@
     "@primeng/themes": "^19.0.5",
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.7",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "ng2-charts": "^8.0.0",
     "primeicons": "^7.0.0",
